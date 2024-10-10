@@ -177,10 +177,7 @@ cv.heart = cv.tree(tree.heart, FUN = prune.misclass)
 cv.heart
 
 plot(cv.heart$size, cv.heart$dev, type = "b")
-
-#three or four will probably do here
 prune.heart = prune.misclass(tree.heart, best =3)
-#figure out why this is above 100 percent and tell students in lecture
 plot(prune.heart)
 text(prune.heart, pretty=0)
 
